@@ -23,7 +23,12 @@
 			<td><strong><button style="center;"><a href ="">Salir</a></button></strong></td>
 		</tr>
 	</table>
-	<%List<Evento> lista = (List<Evento>)request.getAttribute("eventos"); %>
+	<%List<Evento> lista = (List<Evento>)request.getAttribute("eventos"); 
+	if(request.getAttribute("mensaje")==null){
+		request.setAttribute("mensaje", "");
+		}else{
+			request.getAttribute("mensaje");
+	}%>
 		<h1><%= request.getAttribute("mensaje") %></h1>
 		<button style="center;"><a href ="altaEvento.jsp">Nuevo evento</a></button>
 		<button style="center;"><a href ="eventos?opcion=activo">Activos</a></button>

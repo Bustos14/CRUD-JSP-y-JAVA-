@@ -29,7 +29,7 @@ public class GestionEventos extends HttpServlet {
 	private List<Evento> listaEvento = eDao.buscarActivos();
 	private IntTipoDao tipo = new TipoDaoImpl();
 	List<Tipo> listaTipo = tipo.buscarTodos();
-	String mensaje = "";
+	String mensaje;
 
 	public GestionEventos() {
 		super();
